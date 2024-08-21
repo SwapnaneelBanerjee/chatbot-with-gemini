@@ -16,8 +16,7 @@ st.set_page_config(
     menu_items={
         'Get Help': 'https://www.your-help-url.com',  # Need to add a help link soon
         'Report a bug': 'https://www.your-bug-report-url.com',  # Need to add a Bug report link
-        'About': "# Neel's Answerbot\nThis is an AI-powered chatbot built with Streamlit and uses Google Gemini-Pro.",
-        'Visit my page':'https://swapnaneelbanerjee.github.io/Profile/'
+        'About': "# Neel's Answerbot\nThis is an AI-powered chatbot built with Streamlit and uses Google Gemini-Pro."
     }
 )
 
