@@ -10,8 +10,15 @@ load_dotenv()
 
 # Streamlit configuration
 st.set_page_config(
-    page_title="Neel's Answerbot!",  
+    page_title="Neel's Answerbot!",
+    page_icon="🤖",
     layout="centered", 
+    menu_items={
+        'Get Help': 'https://www.your-help-url.com',  # Need to add a help link soon
+        'Report a bug': 'https://www.your-bug-report-url.com',  # Need to add a Bug report link
+        'About': "# Neel's Answerbot\nThis is an AI-powered chatbot built with Streamlit and uses Google Gemini-Pro.",
+        'Visit my page':'https://swapnaneelbanerjee.github.io/Profile/'
+    }
 )
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
@@ -33,7 +40,7 @@ if "chat_session" not in st.session_state:
     st.session_state.chat_session = model.start_chat(history=[])
 
 
-st.title("Neel's Answering - ChatBot")
+st.title("Neel's Smart AnswerBot")
 
 for message in st.session_state.chat_session.history:
     with st.chat_message(translate_role_for_streamlit(message.role)):
