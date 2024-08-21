@@ -33,7 +33,7 @@ if "chat_session" not in st.session_state:
     st.session_state.chat_session = model.start_chat(history=[])
 
 
-st.title("Answering - ChatBot")
+st.title("Neel's Answering - ChatBot")
 
 for message in st.session_state.chat_session.history:
     with st.chat_message(translate_role_for_streamlit(message.role)):
